@@ -16,8 +16,10 @@ export default function Header() {
         </div>
         <div className="content">
           <img src={parrot} alt="image of a happy parrot." className="parrot" />
-          <h1>PollyGlot</h1>
-          <p>Perfect Translation Every Time</p>
+          <div className="text-wrapper">
+            <h1>PollyGlot</h1>
+            <p className="subtitle">Perfect Translation Every Time</p>
+          </div>
         </div>
       </header>
     </>
