@@ -1,6 +1,16 @@
-#root {
-  max-width: 1280px;
+#root,
+body {
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  overflow-x: auto;
+}
+
+* {
+  /* this makes sure the padding and the border is included in the box sizing */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
