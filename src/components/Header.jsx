@@ -1,13 +1,33 @@
 import React from "react";
+import "../styles/Header.css";
+import parrot from "../assets/parrot.png";
+import worldmap from "../assets/worldmap.png";
 
 export default function Header() {
-  <>
-    <header></header>
-  </>;
+  return (
+    <>
+      <header>
+        <div className="worldmap-container">
+          <img
+            src={worldmap}
+            alt="image of a world map."
+            className="worldmap"
+          />
+        </div>
+        <div className="content">
+          <img src={parrot} alt="image of a happy parrot." className="parrot" />
+          <h1>PollyGlot</h1>
+          <p>Perfect Translation Every Time</p>
+        </div>
+      </header>
+    </>
+  );
 }
 
 /* 
 Create the Header 
+
+
 In the main there are a few things that need to be addressed:
 - Text to translate section - with text field 
 - Select language - a list of 3 languages for the use to select
