@@ -8,8 +8,13 @@ header {
 }
 
 .parrot {
-    height: 150px;
-    width: 150px;
+    height: 80px;
+    width: 80px;
+    margin-left: 32px;
+}
+
+.worldmap {
+    height: 180px;
 }
 
 .content {
@@ -29,3 +34,11 @@ header {
 .subtitle {
     color: #ffffff;
 }
+
+
+
+/* Good for larger screen. */
+/* .parrot {
+    height: 150px;
+    width: 150px;
+} */
