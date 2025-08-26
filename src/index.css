@@ -3,3 +3,10 @@
   overflow-x: hidden;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+/* Setting a coloured background for larger screens as the banner won't look stretched across much larger screen sizes. */
+@media only screen and (min-width: 690px) and (max-width: 2000px) {
+  #root {
+    background-color: #1e3060;
+  }
+}

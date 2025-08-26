@@ -27,7 +27,7 @@ export default function Header() {
 }
 
 /* 
-Create the Header 
+
 
 
 In the main there are a few things that need to be addressed:
@@ -41,6 +41,8 @@ the fields need to either need to be replaced or the button links to a page to d
 Original text - with the users text in a text field 
 Your translation - with the translated users text depending on the language they selected.
 Start over button - takes the user back to the original screen
+
+Set the background to be a colour for when the app is open on larger screens.
 
 Using the open AI API to handle the translations and if available present language options to users on the frontend.
 
