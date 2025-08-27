@@ -30,13 +30,10 @@ export default function Header() {
 
 
 
-In the main there are a few things that need to be addressed:
-- Text to translate section - with text field 
-- Select language - a list of 3 languages for the use to select
-- Translate button 
 
-When the translate button is hit, 
-the fields need to either need to be replaced or the button links to a page to display the following:
+The code needs to get hold of the users inputted text and the language selected to then pass on to the AI, 
+when the translate button is hit.
+The fields then need to either be replaced or the button links to a page to display the following:
 
 Original text - with the users text in a text field 
 Your translation - with the translated users text depending on the language they selected.
