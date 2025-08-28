@@ -1,5 +1,8 @@
 import React from "react";
 import "../styles/Content.css";
+import France from "../assets/fr-flag.png";
+import Japan from "../assets/jpn-flag.png";
+import Spain from "../assets/sp-flag.png";
 
 export default function Content() {
   const [isLanguage, setIsLanguage] = React.useState(""); // will be tracking the value here.
@@ -26,7 +29,7 @@ export default function Content() {
             checked={isLanguage === "french"}
             onChange={handleLanguage}
           />
-          French
+          <img src={France} alt="French flag" className="flag-icon" /> French
         </label>
         <label className="japanese-label">
           <input
@@ -36,7 +39,7 @@ export default function Content() {
             checked={isLanguage === "japanese"}
             onChange={handleLanguage}
           />
-          Japanese
+          <img src={Japan} alt="Japanese flag" className="flag-icon" /> Japanese
         </label>
         <label className="spanish-label">
           <input
@@ -46,12 +49,12 @@ export default function Content() {
             checked={isLanguage === "spanish"}
             onChange={handleLanguage}
           />
-          Spanish
+          <img src={Spain} alt="Spanish flag" className="flag-icon" /> Spanish
         </label>
       </div>
       <br />
       {/* The button will only show if a language has been selected. */}
-      {isLanguage && <button>Translate</button>}
+      {isLanguage && <button className="translate-btn">Translate</button>}
     </div>
   );
 }

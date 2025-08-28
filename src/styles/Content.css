@@ -6,10 +6,10 @@
 
 .buttons-element label {
     display: inline-block;
-    background-color: transparent;
+    background-color: #F5F5F5;
     font-family: "Karla", sans-serif;
     color: #0d182e;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     border: 2px solid #0d182e;
     border-radius: 16px;
     padding: 0.25em 1em;
@@ -25,4 +25,20 @@ label:has(input[type="radio"]:checked) {
 .buttons-element label:hover {
     background-color: #32CD32;
     cursor: pointer;
+}
+
+.flag-icon {
+    width: 14px;
+    vertical-align: middle;
+}
+
+.translate-btn {
+    font-size: 0.75rem;
+    border: 2px solid #035A9D;
+    background-color: #035A9D;
+    color: #F5F5F5;
+    border-radius: 6px;
+    padding: 0.25em 1em;
+    margin: 0.5em 0;
+    margin-right: 1em;
 }
