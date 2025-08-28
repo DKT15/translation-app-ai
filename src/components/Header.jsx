@@ -28,9 +28,10 @@ export default function Header() {
 
 /* 
 
+Replace the radios with buttons
+
 The code needs to get hold of the users inputted text and the language selected to then pass on to the AI, 
-when the translate button is hit. The button should not be available to be clicked until the user has entered in text
-and selected a language.
+when the translate button is hit.
 The fields then need to either be replaced or the button links to a page to display the following:
 
 Original text - with the users text in a text field 

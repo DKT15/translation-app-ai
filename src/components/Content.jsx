@@ -17,36 +17,38 @@ export default function Content() {
       <h2>Text to translate</h2>
       <input type="text" />
       <h2>Select a language</h2>
-      <label className="french-label">
-        <input
-          type="radio"
-          name="language"
-          value="french"
-          checked={isLanguage === "french"}
-          onChange={handleLanguage}
-        />
-        French
-      </label>
-      <label className="japanese-label">
-        <input
-          type="radio"
-          name="language"
-          value="japanese"
-          checked={isLanguage === "japanese"}
-          onChange={handleLanguage}
-        />
-        Japanese
-      </label>
-      <label className="spanish-label">
-        <input
-          type="radio"
-          name="language"
-          value="spanish"
-          checked={isLanguage === "spanish"}
-          onChange={handleLanguage}
-        />
-        Spanish
-      </label>
+      <div className="buttons-element">
+        <label className="french-label">
+          <input
+            type="radio"
+            name="language"
+            value="french"
+            checked={isLanguage === "french"}
+            onChange={handleLanguage}
+          />
+          French
+        </label>
+        <label className="japanese-label">
+          <input
+            type="radio"
+            name="language"
+            value="japanese"
+            checked={isLanguage === "japanese"}
+            onChange={handleLanguage}
+          />
+          Japanese
+        </label>
+        <label className="spanish-label">
+          <input
+            type="radio"
+            name="language"
+            value="spanish"
+            checked={isLanguage === "spanish"}
+            onChange={handleLanguage}
+          />
+          Spanish
+        </label>
+      </div>
       <br />
       {/* The button will only show if a language has been selected. */}
       {isLanguage && <button>Translate</button>}
