@@ -16,45 +16,48 @@ export default function Content() {
   // the state value is being set in checked.
   // onChange updates state with the handleLanguage function.
   return (
-    <div className="content-container">
-      <h2>Text to translate</h2>
-      <input type="text" />
-      <h2>Select a language</h2>
-      <div className="buttons-element">
-        <label className="french-label">
-          <input
-            type="radio"
-            name="language"
-            value="french"
-            checked={isLanguage === "french"}
-            onChange={handleLanguage}
-          />
-          <img src={France} alt="French flag" className="flag-icon" /> French
-        </label>
-        <label className="japanese-label">
-          <input
-            type="radio"
-            name="language"
-            value="japanese"
-            checked={isLanguage === "japanese"}
-            onChange={handleLanguage}
-          />
-          <img src={Japan} alt="Japanese flag" className="flag-icon" /> Japanese
-        </label>
-        <label className="spanish-label">
-          <input
-            type="radio"
-            name="language"
-            value="spanish"
-            checked={isLanguage === "spanish"}
-            onChange={handleLanguage}
-          />
-          <img src={Spain} alt="Spanish flag" className="flag-icon" /> Spanish
-        </label>
+    <div className="container">
+      <div className="content-container">
+        <h2>Text to translate</h2>
+        <input type="text" />
+        <h2>Select a language</h2>
+        <div className="buttons-element">
+          <label className="french-label">
+            <input
+              type="radio"
+              name="language"
+              value="french"
+              checked={isLanguage === "french"}
+              onChange={handleLanguage}
+            />
+            <img src={France} alt="French flag" className="flag-icon" /> French
+          </label>
+          <label className="japanese-label">
+            <input
+              type="radio"
+              name="language"
+              value="japanese"
+              checked={isLanguage === "japanese"}
+              onChange={handleLanguage}
+            />
+            <img src={Japan} alt="Japanese flag" className="flag-icon" />{" "}
+            Japanese
+          </label>
+          <label className="spanish-label">
+            <input
+              type="radio"
+              name="language"
+              value="spanish"
+              checked={isLanguage === "spanish"}
+              onChange={handleLanguage}
+            />
+            <img src={Spain} alt="Spanish flag" className="flag-icon" /> Spanish
+          </label>
+        </div>
+        <br />
+        {/* The button will only show if a language has been selected. */}
+        {isLanguage && <button className="translate-btn">Translate</button>}
       </div>
-      <br />
-      {/* The button will only show if a language has been selected. */}
-      {isLanguage && <button className="translate-btn">Translate</button>}
     </div>
   );
 }

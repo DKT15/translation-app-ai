@@ -42,7 +42,7 @@ Make sure CSS follows best practice
 Potentially might have to track if the text has been translated with useState and if there has been any change with the 
 selected radios by using an onChange and useState if I encounter issues with the ai knowing what has been selected.
 
-Using the open AI API to handle the translations and if available present language options to users on the frontend.
+Mapping the radios into the prompts so the AI knows what language it needs to translate ot.
 
 Will create a frontend helper 
 Serverless function will be created and linked to netflify to protect the API key.
