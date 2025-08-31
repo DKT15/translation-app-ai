@@ -18,9 +18,9 @@ export default function Content() {
   return (
     <div className="container">
       <div className="content-container">
-        <h2>Text to translate</h2>
-        <input type="text" />
-        <h2>Select a language</h2>
+        <h2>Text to translate 👇</h2>
+        <textarea className="translation-input"></textarea>
+        <h2>Select a language 👇</h2>
         <div className="buttons-element">
           <label className="french-label">
             <input
