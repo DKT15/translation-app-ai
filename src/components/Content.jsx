@@ -6,11 +6,23 @@ import Spain from "../assets/sp-flag.png";
 
 export default function Content() {
   const [isLanguage, setIsLanguage] = React.useState(""); // will be tracking the value here.
+  const [isTranslated, setIsTranslated] = React.useState(false); // tracking to see if the user has hit the button the translate
 
   // setting onchange to the actual value from the radio e.target.value gets back.
   // e.target.value is used as that is how to access a radios value and to know what the user has selected.
   const handleLanguage = (e) => {
     setIsLanguage(e.target.value);
+  };
+
+  const translateText = () => {
+    if (isTranslated) {
+      return <></>;
+    }
+  };
+
+  const newTranslation = () => {
+    setIsLanguage(false);
+    setIsLanguage("");
   };
 
   // the state value is being set in checked.
@@ -56,7 +68,14 @@ export default function Content() {
         </div>
         <br />
         {/* The button will only show if a language has been selected. */}
-        {isLanguage && <button className="translate-btn">Translate</button>}
+        {isLanguage && (
+          <button
+            onClick={isTranslated ? translateText : newTranslation}
+            className="translate-btn"
+          >
+            Translate
+          </button>
+        )}
       </div>
     </div>
   );
