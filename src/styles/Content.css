@@ -18,7 +18,9 @@ h2 {
     align-items: center;
 }
 
-.translation-input {
+.translation-input,
+.original-text,
+.user-translation {
     width: 260px;
     height: 120px;
     top: 300px;
@@ -26,6 +28,7 @@ h2 {
     border-radius: 8px;
     background-color: #EFF0F4;
     border: 2px solid #EFF0F4;
+    resize: none;
 }
 
 .buttons-element input[type="radio"] {
@@ -64,7 +67,8 @@ label:has(input[type="radio"]:checked) {
     vertical-align: middle;
 }
 
-.translate-btn {
+.translate-btn,
+.reset-btn {
     font-size: 1rem;
     font-weight: bold;
     border: 2px solid #035A9D;
@@ -72,5 +76,5 @@ label:has(input[type="radio"]:checked) {
     color: #F5F5F5;
     border-radius: 6px;
     padding: 0.75em 6em;
-    margin: 0.5em 0;
+    margin: 1.25em 0;
 }
