@@ -28,11 +28,8 @@ export default function Header() {
 
 /* 
 
-
 The code needs to get hold of the users inputted text and the language selected to then pass on to the AI, 
-when the translate button is hit.
-
-Mapping the radios into the prompts so the AI knows what language it needs to translate. isLangauge state will be important here as it holds the language the user has selected.
+when the translate button is hit. Mapping the radios into the prompts so the AI knows what language it needs to translate. isLangauge state will be important here as it holds the language the user has selected.
 
 Will create a frontend helper 
 Serverless function will be created and linked to netflify to protect the API key.
