@@ -9,8 +9,7 @@ export default function Content() {
   const [isTranslated, setIsTranslated] = React.useState(false); // tracking to see if the user has hit the button the translate
   const [inputText, setInputText] = React.useState(""); // state for input
   const [userTranslation, setUserTranslation] = React.useState(""); //state for translation
-
-  console.log(isTranslated);
+  const [loading, setLoading] = React.useState(false);
 
   // setting onchange to the actual value from the radio e.target.value gets back.
   // e.target.value is used as that is how to access a radios value and to know what the user has selected.
@@ -23,6 +22,27 @@ export default function Content() {
     setIsLanguage("");
     setInputText("");
     setUserTranslation("");
+  };
+
+  // communicating with the netlify function to complete the translation
+  const handleTranslate = async () => {
+    setLoading(true);
+    try {
+      // sending data off to the ai to begin with.
+      const res = await fetch("/.netlify/functions/openai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: inputText, targetLang: isLanguage }), // this inserts the current user text and language selection in the AI prompt.
+      });
+      // awaiting the response. Setting the user translation to what the ai gives back.
+      const data = await res.json();
+      setUserTranslation(data.translation); //translation is the property the server responds with the correct translated text.
+      setIsTranslated(true); //setting true which will switch the users view so they can see the translated text.
+    } catch (error) {
+      console.error("Translation failed", error);
+    } finally {
+      setLoading(false); //loading is now false.
+    }
   };
 
   const translateText = () => {
@@ -40,7 +60,7 @@ export default function Content() {
           value={userTranslation} //setting the value of state to whatever the users translation is.
           readOnly
         ></textarea>
-        <button onClick={isTranslated && newTranslation} className="reset-btn">
+        <button onClick={newTranslation} className="reset-btn">
           Start Over
         </button>
       </div>
@@ -99,10 +119,11 @@ export default function Content() {
           {/* The button will only show if a language has been selected. */}
           {isLanguage && (
             <button
-              onClick={() => setIsTranslated(true)} //updating state to true when the button is clicked.
+              onClick={handleTranslate} //fetches the translation which allows for the view to be changed.
               className="translate-btn"
+              disabled={loading}
             >
-              Translate
+              {loading ? "Translating..." : "Translate"}
             </button>
           )}
         </div>
