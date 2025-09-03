@@ -21,6 +21,7 @@ export default async function handler(event) {
         },
       ],
       temperature: 0,
+      max_tokens: 50,
     });
     return {
       statusCode: 200,
@@ -29,10 +30,10 @@ export default async function handler(event) {
       }),
     };
   } catch (error) {
-    console.log(error);
+    console.log("OpenAI error:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Translation failed" }),
+      body: JSON.stringify({ error: error.message || "Translation failed" }),
     };
   }
 }

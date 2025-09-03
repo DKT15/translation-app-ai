@@ -34,6 +34,7 @@ export default function Content() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: inputText, targetLang: isLanguage }), // this inserts the current user text and language selection in the AI prompt.
       });
+
       // awaiting the response. Setting the user translation to what the ai gives back.
       const data = await res.json();
       setUserTranslation(data.translation); //translation is the property the server responds with the correct translated text.
