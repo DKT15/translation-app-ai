@@ -29,7 +29,11 @@ export default function Content() {
     return (
       <div className="content-container">
         <h2>Original text 👇</h2>
-        <textarea className="original-text" value={inputText}></textarea>
+        <textarea
+          className="original-text"
+          value={inputText}
+          readOnly
+        ></textarea>
         <h2>Your translation 👇</h2>
         <textarea
           className="user-translation"
