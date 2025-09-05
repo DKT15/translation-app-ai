@@ -4,7 +4,7 @@ import OpenAI from "openai";
 
 const openai = new OpenAI({ apiKey: process.env.TRANSLATION_API_KEY });
 
-export default async function handler(event) {
+export async function handler(event) {
   const { text, targetLang } = JSON.parse(event.body);
 
   try {
@@ -30,7 +30,7 @@ export default async function handler(event) {
       }),
     };
   } catch (error) {
-    console.log("OpenAI error:", error);
+    console.error("OpenAI error:", error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message || "Translation failed" }),
