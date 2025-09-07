@@ -8,13 +8,16 @@ header {
 }
 
 .parrot {
-    height: 80px;
-    width: 80px;
-    margin-left: 32px;
+    height: 100%;
+    max-height: 80px;
+    width: 100%;
+    max-width: 80px;
+    margin-left: 2em;
 }
 
 .worldmap {
-    height: 180px;
+    height: 100%;
+    max-height: 180px;
 }
 
 .content {
@@ -28,7 +31,7 @@ header {
 
 .text-wrapper {
     text-align: left;
-    margin: 0 32px;
+    margin: 0 2em;
 }
 
 .subtitle {

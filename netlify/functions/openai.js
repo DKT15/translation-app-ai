@@ -34,7 +34,7 @@ export async function handler(event) {
     };
   } catch (error) {
     // if anything goes wrong, an error is logged and a HTTP 500 is returned along with an error message.
-    console.error("OpenAI error:", error);
+    console.error(error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message || "Translation failed" }),
