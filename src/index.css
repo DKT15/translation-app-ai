@@ -9,4 +9,12 @@
   #root {
     background-color: #1e3060;
   }
+
+  h2 {
+    color: white;
+  }
+
+  .content-container {
+    border-color: white;
+  }
 }
